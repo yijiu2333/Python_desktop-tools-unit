@@ -1,0 +1,14 @@
+{
+    "MainWindow": {
+        "EnableAcrylic": false,
+        "PlayBarColor": "#ff225c7f",
+        "RecentPlayNumbers": 300,
+        "ThemeMode": "Light"
+    },
+    "Online": {
+        "MvQuality": "Full HD"
+    },
+    "QFluentWidgets": {
+        "ThemeColor": "#ff009faa"
+    }
+}
