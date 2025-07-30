@@ -54,10 +54,10 @@
 ---
 
 ## 🖼️ 程序总览
-   ![home page](./github/home.png)
-   ![AI assistant](./github/Eileen.png)
-   ![QR generator](./github/qr.png)
-   ![notebook](./github/notes.png)
+   ![home page](./images/github/home.png)
+   ![AI assistant](./images/github/Eileen.png)
+   ![QR generator](./images/github/qr.png)
+   ![notebook](./images/github/notes.png)
 
 ---
 
