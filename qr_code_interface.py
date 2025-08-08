@@ -1,10 +1,3 @@
-# Copyright (C) 2025  <Yijiu Zhao>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
 # coding:utf-8
 import sys
 import os
@@ -15,8 +8,8 @@ from qfluentwidgets import (SubtitleLabel, setFont, FlowLayout, PlainTextEdit,
                             CardWidget, PrimaryPushButton, IconWidget, SmoothScrollArea, PushButton, InfoBar, InfoBarPosition)
 from qfluentwidgets import FluentIcon as FIF 
 
-import qr_code_creater
-import menu_image_label
+import components.qr_code_creater as qr_code_creater
+import components.menu_image_label as menu_image_label
 
 # init global variables
 filename = 'default'

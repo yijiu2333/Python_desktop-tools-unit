@@ -1,15 +1,13 @@
-# Copyright (C) 2025  <Yijiu Zhao>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
 # coding:utf-8
+import sys
+import os
 
-from PyQt5.QtCore import Qt, QEasingCurve
-from PyQt5.QtWidgets import QFrame, QHBoxLayout, QVBoxLayout
-from qfluentwidgets import (SubtitleLabel, setFont, IconWidget, SmoothScrollArea,
+from PyQt5.QtCore import Qt, QUrl, QEasingCurve
+from PyQt5.QtGui import QIcon, QDesktopServices
+from PyQt5.QtWidgets import QApplication, QFrame, QHBoxLayout, QVBoxLayout
+from qfluentwidgets import (NavigationItemPosition, MessageBox, setTheme, Theme, FluentWindow,
+                            NavigationAvatarWidget, qrouter, SubtitleLabel, setFont, InfoBadge,
+                            InfoBadgePosition, FluentBackgroundTheme,  IconWidget, SmoothScrollArea,
                             SettingCardGroup, OptionsSettingCard, )
 from qfluentwidgets import FluentIcon as FIF 
 

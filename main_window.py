@@ -1,10 +1,3 @@
-# Copyright (C) 2025  <Yijiu Zhao>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
 # coding:utf-8
 import sys
 import os
@@ -20,6 +13,7 @@ import frame # type: ignore # import the frame module
 import qr_code_interface # type: ignore # import the qr_code_interface module
 import note_pad_interface # type: ignore # import the note_pad_interface module
 import ai_catgirl_interface # type: ignore # import the ai_catgirl_interface module
+import gallery_interface # type: ignore # import the gallery_interface module
 
 
 class Window(FluentWindow):
@@ -33,7 +27,10 @@ class Window(FluentWindow):
         self.catgirlInterface = ai_catgirl_interface.Frame(self)
         self.notepadInterface = note_pad_interface.Frame(self)
         self.settingInterface = frame.Frame('Setting Interface', self)
+        self.albumInterface = frame.Frame('Album Interface', self)
+        self.albumInterface1 = frame.Frame('Album Interface 1', self)
         self.qrcodeInterface = qr_code_interface.Frame(self)
+        self.galleryInterface = gallery_interface.Frame(self)
 
         self.initSplashScreen()
 
@@ -81,8 +78,12 @@ class Window(FluentWindow):
         self.addSubInterface(self.catgirlInterface, FIF.HELP, 'Catgirl Eileen')
         self.addSubInterface(self.notepadInterface, FIF.BOOK_SHELF, 'Note pad')
         self.addSubInterface(self.qrcodeInterface, FIF.QRCODE, 'QR code')
+        self.addSubInterface(self.galleryInterface, FIF.PHOTO, 'Gallery')
 
         self.navigationInterface.addSeparator()
+
+        self.addSubInterface(self.albumInterface, FIF.ALBUM, 'Albums', NavigationItemPosition.SCROLL)
+        self.addSubInterface(self.albumInterface1, FIF.ALBUM, 'Album 1', parent=self.albumInterface)
 
         self.addSubInterface(self.settingInterface, FIF.SETTING, 'Settings', NavigationItemPosition.BOTTOM)
 

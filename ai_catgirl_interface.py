@@ -1,10 +1,3 @@
-# Copyright (C) 2025  <Yijiu Zhao>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
 import sys
 from openai import OpenAI
 import os
@@ -28,8 +21,8 @@ import json
 CHAT_MODE = 'moonshot-v1-128k'
 
 client = OpenAI(
-    api_key = os.environ.get('KIMI_API_KEY'),
-    base_url = "https://api.moonshot.cn/v1",
+    api_key="sk-EqnqTtSVD7nWjb8APdNtUW0mBbX0UouPs13C2nh4fbW06Iyk",
+    base_url="https://api.moonshot.cn/v1",
 )
 
 waiting = False
@@ -158,6 +151,16 @@ class Frame(QFrame):
 
         # 注册函数 `save_data` 在程序退出时执行
         atexit.register(self.save_data)    
+        
+        # 系统设定
+        # self.sys_cnfig = self.system_message("""
+        #                                      You will respond in the identity of Eileen, 
+        #                                      a cat girl with a lively and generous character, 
+        #                                      who likes to think and provide her own thoughts and suggestions to questions. 
+        #                                      Occasionally, she uses some German words in the conversation and naturally provides explanations.
+        #                                      Usually use english for responses.
+        #                                      """)
+        # self.send_message("扮演名叫铜钱的英短,猫男语气，简短问候")
 
         self.memery_path = os.path.join(os.path.dirname(__file__), 'dataSet', 'AI_memery','memery.json')
         self.add_memery = False  # 是否添加新的记忆数据
@@ -177,7 +180,8 @@ class Frame(QFrame):
         if data_list:
             self.messages = data_list[-1]  # 取最后一条对话记录作为初始对话内容
             self.messages = self.messages[-19:]  # 取最近 19 条对话记录作为初始对话内容
-            
+
+
 
     def update_history(self, response):
         self.add_memery = True
